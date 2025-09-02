@@ -43,31 +43,3 @@ class BookSerializer(serializers.ModelSerializer):
         return data
     
 
-
-# To Do:
-# Decide which endpoints will be public vs protected.(with Permissions)
-
-# Basic Authentication for initial testing.
-# Token Authentication for real-world API usage.- to add 
-# Secure sensitive endpoints so only authenticated users can access them. -only admin?
-# . Authorization & Role-Based Access
-# Use DRF’s permissions system to restrict certain actions (e.g., only Admin can delete, Regular User can only read/write their own objects).
-# Protect routes accordingly.
-
-
-# about users:
-
-# https://codesignal.com/learn/courses/user-authentication-and-permissions-in-drf/lessons/implementing-sign-in-and-sign-up-in-django-api
-# # users?:
-#     password = serializers.CharField(write_only=True) 
-#     confirm_password = serializers.CharField(write_only=True)
-
-#     class Meta:
-#         model = User
-#         fields = ['username', 'password']
-
-#     def validate(self, data):  
-#         if data['password'] != data['confirm_password']: 
-#             raise serializers.ValidationError( "Passwords do not match.")
-
-#         return data

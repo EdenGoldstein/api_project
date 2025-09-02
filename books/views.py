@@ -96,7 +96,7 @@ class BookViewSet(ModelViewSet):
     def perform_create(self, serializer):
         serializer.save()
     
-    # @permission_classes(IsAdminUser)    
+     
     def delete(self, request, pk):
         try:
             book = Book.objects.get(pk=pk)
